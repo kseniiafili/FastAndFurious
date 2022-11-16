@@ -5,71 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Diary</title>
-    <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="diary.css" title="style" />
     <script src="script.js"></script>
   </head>
   <body>
-    <h1>Your Password Diary</h1>
-    <button id="search" onclick="">Search</button>
-    <button id="addNew" onclick="">Add New</button>
-    <button id="passwordGenerator" onclick="">Password Generator</button>
-    <button id="MyNotes" onclick="">My Notes</button>
-    <div id="financial">
-      <h3>Financial</h3>
-      <p>Website name</p>
-      <div class="input">Username <input id="username" /></div>
-      <div class="input">
-        Password
-        <input class="password" type="password" />
-      </div>
-    </div>
-    <div id="shopping">
-      <h3>Shopping</h3>
-      <p>Website name</p>
-      <div class="input">Username <input id="username" /></div>
-      <div class="input">
-        Password
-        <input class="password" type="password" />
-      </div>
-    </div>
-    <div id="games">
-      <h3>Games</h3>
-      <p>Website name</p>
-      <div class="input">Username <input id="username" /></div>
-      <div class="input">
-        Password
-        <input class="password" type="password" />
-      </div>
-    </div>
-    <div id="education">
-      <h3>Education</h3>
-      <p>Website name</p>
-      <div class="input">Username <input id="username" /></div>
-      <div class="input">
-        Password
-        <input class="password" type="password" />
-      </div>
-    </div>
-    <div id="social">
-      <h3>Social</h3>
-      <p>Website name</p>
-      <div class="input">Username <input id="username" /></div>
-      <div class="input">
-        Password
-        <input class="password" type="password" />
-      </div>
-    </div>
-    <div id="other">
-      <h3>Other</h3>
-      <p>Website name</p>
-      <div class="input">Username <input id="username" /></div>
-      <div class="input">
-        Password
-        <input class="password" type="password" />
-      </div>
+
+    <div id="content">
+
+        <header>
+            <h1>Your Password Diary</h1>
+
+            <button id="search" onclick="">Search</button>
+            <button id="addNew" onclick="">Add New</button>
+            <button id="passwordGenerator" onclick="">Password Generator</button>
+            <button id="MyNotes" onclick="">My Notes</button>
+        </header>
+
+        
+
+        <div id="Financial" class="category">
+            <h3>Financial</h3>
+            <dl>
+                <dt>
+                    <span class="webName">Website name</span> 
+                    Username: <span class="username">exName</span>
+                    Password: <span class="password">exPassword</span>
+                    <button id="edit" class="webOptions" onclick="">edit</button>
+                    <button id="delete" class="webOptions" onclick="">delete</button>
+                </dt>
+            </dl>
+        </div>
+
+        <div id="Shopping" class="category">
+            <h3>Shopping</h3>
+            <dl>
+                <dt>
+                    <span class="webName">Website name</span> 
+                    Username: <span class="username">exName</span>
+                    Password: <span class="password">exPassword</span>
+                    <button id="edit" class="webOptions" onclick="">edit</button>
+                    <button id="delete" class="webOptions" onclick="">delete</button>
+
+                </dt>
+            </dl>
+        </div>
+
+        <div id="Games" class="category">
+            <h3>Games</h3>
+            <dl>
+                <dt>
+                    <span class="webName">Website name</span> 
+                    Username: <span class="username">exName</span>
+                    Password: <span class="password">exPassword</span>
+                    <button id="edit" class="webOptions" onclick="">edit</button>
+                    <button id="delete" class="webOptions" onclick="">delete</button>
+                </dt>
+            </dl>
+        </div>
+
+
+        <div id="Education" class="category">
+            <h3>Education</h3>
+            <dl>
+                <dt>
+                    <span class="webName">Website name</span> 
+                    Username: <span class="username">exName</span>
+                    Password: <span class="password">exPassword</span>
+                    <button id="edit" class="webOptions" onclick="">edit</button>
+                    <button id="delete" class="webOptions" onclick="">delete</button>
+                </dt>
+            </dl>
+        </div>
+
+        <div id="Social" class="category">
+            <h3>Social</h3>
+            <dl>
+                <dt>
+                    <span class="webName">Website name</span> 
+                    Username: <span class="username">exName</span>
+                    Password: <span class="password">exPassword</span>
+                    <button id="edit" class="webOptions" onclick="">edit</button>
+                    <button id="delete" class="webOptions" onclick="">delete</button>
+                </dt>
+            </dl>
+        </div>
+
+        <div id="Other" class="category">
+            <h3>Other</h3>
+            <dl>
+                <dt>
+                    <span class="webName">Website name</span> 
+                    Username: <span class="username">exName</span>
+                    Password: <span class="password">exPassword</span>
+                    <button id="edit" class="webOptions" onclick="">edit</button>
+                    <button id="delete" class="webOptions" onclick="">delete</button>
+                </dt>
+            </dl>
+        </div>
+
+        <div id="lockUnlock">
+            <button id="lock" onclick="">Lock</button>
+            <button id="unlock" onclick="">Unlock</button>
+        </div>
     </div>
 
-    <button id="lock" onclick="">Lock</button>
-    <button id="unlock" onclick="">Unlock</button>
+
+    
   </body>
 </html>
