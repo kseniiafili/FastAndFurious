@@ -1,26 +1,31 @@
-#content{
-    margin: auto;
-    width: 50%;
-    border: 3px solid black;
-    padding: 10px;
-    background-color: rgb(220,220,220);
+#content {
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+  background-color: #dfd3c3;
+  margin-top: 100px;
 }
-header{
-    text-align: center;
+header {
+  text-align: center;
 }
-span{
-    margin-right: 5%;
+span {
+  margin-right: 5%;
 }
-dl{
-    background-color: rgb(201, 201, 201);
+dt {
+  margin-top: 1%;
+  border-bottom: solid;
 }
-dt{
-    margin-top: 1%;
-    border-bottom: solid;
+#edit {
+  margin-left: 20%;
 }
-#edit{
-    margin-left: 20%;
+#lockUnlock {
+  text-align: center;
 }
-#lockUnlock{
-    text-align: center;
+body {
+  background-color: #f8ede3;
+}
+h1 {
+  color: #7d6e83;
+  font-family: "Palyfair";
 }
