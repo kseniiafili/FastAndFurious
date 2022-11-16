@@ -5,21 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Diary | Add New</title>
-    <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="addnew.css" title="style" />
     <script src="script.js"></script>
   </head>
   <body>
+    <div id="content">
     <h1>Add New Login Information</h1>
-    <div class="input">Website <input id="addNewWebsite" /></div>
-    <div class="input">
-      Username
-      <input id="addNewName" type="password" />
-    </div>
-    <div class="input">Password<input id="addNewPass" /></div>
-    <div class="input">Website <input id="addNewWebsite" /></div>
 
     <p>
-      Category
+      <span class="fieldName">Website</span>
+      <input class="input" name="website" type="text">      
+    </p>
+
+    <p>
+      <span class="fieldName">Username</span>
+      <input class="input" name="Username" type="text">      
+    </p>
+    <p>
+      <span class="fieldName">Password</span>
+      <input class="input" name="Password" type="text">      
+    </p>
+
+    <p>
+      <span class="fieldName" > Category</span>
       <select name="category">
         <option value="finacial">Financial</option>
         <option value="shopping">Shopping</option>
@@ -29,9 +37,10 @@
         <option value="Other">Other</option>
       </select>
     </p>
-    <div>
+    <div class="buttons">
       <button id="addNewCancel" onclick="">Cancel</button>
       <button id="addNewSave" onclick="">Save</button>
+    </div>
     </div>
   </body>
 </html>
