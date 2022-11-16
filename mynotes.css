@@ -1,14 +1,23 @@
-
-header{
-    text-align: center;
+header {
+  text-align: center;
 }
-.content{
-    margin: auto;
-    width: 50%;
-    border: 3px solid black;
-    padding: 10px;
-    background-color: rgb(220,220,220);
+.content {
+  margin: auto;
+  width: 50%;
+  border: 3px solid #9ed2c6;
+  padding: 10px;
+  background-color: #e9dac1;
 }
-p{
-    text-align: right;
+p {
+  text-align: right;
+}
+#notesfield {
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+body {
+  background-color: #f7ecde;
+}
+h1 {
+  font-family: "Playfair";
 }
