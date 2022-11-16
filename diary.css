@@ -1,0 +1,26 @@
+#content{
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: rgb(220,220,220);
+}
+header{
+    text-align: center;
+}
+span{
+    margin-right: 5%;
+}
+dl{
+    background-color: rgb(201, 201, 201);
+}
+dt{
+    margin-top: 1%;
+    border-bottom: solid;
+}
+#edit{
+    margin-left: 20%;
+}
+#lockUnlock{
+    text-align: center;
+}
