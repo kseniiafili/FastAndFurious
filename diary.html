@@ -14,7 +14,7 @@
         <h1>Your Password Diary</h1>
 
         <button id="colour" onclick="">Change Background Colour</button>
-        <button id="addNew" onclick="">Add New</button>
+        <button id="addNew" onclick="openForm()">Add New</button>
         <button id="passwordGenerator" onclick="">Password Generator</button>
         <a href="mynotes.html"><button id="myNotes">My notes</button></a>
       </header>
@@ -101,6 +101,28 @@
         <button id="lock" onclick="">Lock</button>
         <button id="unlock" onclick="">Unlock</button>
       </div>
+    </div>
+
+
+    <div class="newInfoPopUp" id="newInfo">
+
+        <h1>Login</h1>
+    
+        <label for="newWebsite"><b>Website</b></label>
+        <input type="text" placeholder="Enter Website" id="newWebsite" required>
+
+        <label for="newUsername"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="username" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="text" placeholder="Enter Password" id="password" required>
+
+        <label for="newCategory"><b>Category</b></label>
+        <input type="text" placeholder="Enter Category" id="category" required>
+    
+        <button onclick="save()" class="btn">Save</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
     </div>
   </body>
 </html>
