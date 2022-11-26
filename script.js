@@ -66,20 +66,21 @@ function logIn() {
   }
 }
 function colourChange() {
+  var currentColour = document.body;
   var colours = [
-    "#FFE1E1",
-    "#CDFCF6",
-    "#F9F9F9",
-    "#F675A8",
-    "#D3CEDF",
-    "#CDF0EA",
-    "#F6C6EA",
-    "#F3C5C5",
-    "#A267AC",
-    "#CDF2CA",
+    "rgb(192, 96, 161)",
+    "rgb(205, 252, 246)",
+    "rgb(76, 161, 163)",
+    "rgb(255, 221, 210)",
+    "rgb(255, 135, 135)",
+    "rgb(237, 237, 237)",
+    "rgb(231,246,242)",
   ];
-  var num = Math.floor(Math.random() * 10);
-  document.getElementById("content").style.backgroundColor = colours[num];
+  var num = Math.floor(Math.random() * colours.length);
+  while (colours[num] == currentColour.style.background) {
+    num = Math.floor(Math.random() * colours.length);
+  }
+  document.body.style.background = colours[num];
 }
 function generatePassword() {
   var lowerCase = [
@@ -278,3 +279,52 @@ function hasNumbers(string) {
   }
   return returnValue;
 }
+function save() {
+  var newWebsite = document.getElementById("newWebsite").value;
+  var newUsername = document.getElementById("username").value;
+  var newPassword = document.getElementById("password").value;
+  var newCategory = document.getElementById("category").value;
+
+  var newP = document.createElement("p");
+  $(newP).text(
+    "WEBSITE NAME : " +
+      newWebsite +
+      "USERNAME: " +
+      newUsername +
+      "PASSWORD: " +
+      newPassword
+  );
+  $(newP).attr("class", "webName");
+  $(newP).attr("id", newWebsite);
+
+  $("#" + newCategory).append(newP);
+  var editButton = document.createElement("input");
+  $(editButton).attr("type", "button");
+  $(editButton).attr("value", "edit");
+  $(editButton).attr("class", "edit");
+  $(newP).append(editButton);
+
+  var deleteButton = document.createElement("input");
+  $(deleteButton).attr("type", "button");
+  $(deleteButton).attr("value", "delete");
+  $(deleteButton).attr("class", "delete");
+  $(deleteButton).click(function () {
+    $("#" + newWebsite).remove();
+  });
+  $(newP).append(deleteButton);
+  // console.log(newWebsite, newCategory, newUsername, newPassword);
+  // $("#shopping").append(snewDt);
+
+  //   <!-- <dt>
+  //   <span class="webName">Website name</span>
+  //   Username: <span class="username">exName</span> Password:
+  //   <span class="password">exPassword</span>
+  //   <button id="edit" class="webOptions" onclick="">edit</button>
+  //   <button id="delete" class="webOptions" onclick="">delete</button>
+  // </dt> -->
+  // window.location.href = "diary.html";
+}
+
+// function myDelete(website) {
+//   $("#" + website).remove();
+// }
