@@ -312,19 +312,4 @@ function save() {
     $("#" + newWebsite).remove();
   });
   $(newP).append(deleteButton);
-  // console.log(newWebsite, newCategory, newUsername, newPassword);
-  // $("#shopping").append(snewDt);
-
-  //   <!-- <dt>
-  //   <span class="webName">Website name</span>
-  //   Username: <span class="username">exName</span> Password:
-  //   <span class="password">exPassword</span>
-  //   <button id="edit" class="webOptions" onclick="">edit</button>
-  //   <button id="delete" class="webOptions" onclick="">delete</button>
-  // </dt> -->
-  // window.location.href = "diary.html";
 }
-
-// function myDelete(website) {
-//   $("#" + website).remove();
-// }
