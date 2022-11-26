@@ -1,10 +1,10 @@
 #content {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 200px;
   width: 50%;
-  border: 3px solid black;
+  border: 3px solid #59c1bd;
   padding: 10px;
-  background-color: rgb(220, 220, 220);
+  background-color: #e7f6f2;
 }
 
 .fieldName {
@@ -19,4 +19,7 @@
 }
 h1 {
   text-align: center;
+}
+body {
+  background-color: #cff5e7;
 }
