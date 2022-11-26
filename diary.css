@@ -1,9 +1,9 @@
 #content {
   margin: auto;
   width: 50%;
-  border: 3px solid black;
+  border: 3px solid #59c1bd;
   padding: 10px;
-  background-color: #dfd3c3;
+  background-color: #e7f6f2;
   margin-top: 100px;
 }
 header {
@@ -16,16 +16,26 @@ dt {
   margin-top: 1%;
   border-bottom: solid;
 }
-#edit {
+.edit {
   margin-left: 20%;
 }
 #lockUnlock {
   text-align: center;
 }
 body {
-  background-color: #f8ede3;
+  background-color: #cff5e7;
 }
 h1 {
-  color: #7d6e83;
+  color: #0d4c92;
   font-family: "Palyfair";
+  text-align: center;
+}
+.fieldName {
+  display: inline-block;
+  width: 20%;
+  padding-right: 10px;
+  font-family: sans-serif;
+}
+.buttons {
+  text-align: center;
 }
