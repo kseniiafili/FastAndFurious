@@ -285,6 +285,7 @@ function save() {
   var newPassword = document.getElementById("password").value;
   var newCategory = document.getElementById("category").value;
 
+
   var newP = document.createElement("p");
   $(newP).text(
     "WEBSITE NAME : " +
@@ -313,3 +314,16 @@ function save() {
   });
   $(newP).append(deleteButton);
 }
+
+
+
+
+function openForm() {
+  document.getElementById("newInfo").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("newInfo").style.display = "none";
+}
+
+
