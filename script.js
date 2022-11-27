@@ -74,7 +74,7 @@ function colourChange() {
     "rgb(255, 221, 210)",
     "rgb(255, 135, 135)",
     "rgb(237, 237, 237)",
-    "rgb(231,246,242)",
+    "rgb(231, 246, 242)",
   ];
   var num = Math.floor(Math.random() * colours.length);
   while (colours[num] == currentColour.style.background) {
@@ -307,24 +307,33 @@ function save() {
   var deleteButton = document.createElement("input");
   $(deleteButton).attr("type", "button");
   $(deleteButton).attr("value", "delete");
-  $(deleteButton).attr("class", "delete");
+  $(deleteButton).attr("class", "del");
   $(deleteButton).click(function () {
     $("#" + newWebsite).remove();
   });
   $(newP).append(deleteButton);
-  // console.log(newWebsite, newCategory, newUsername, newPassword);
-  // $("#shopping").append(snewDt);
 
-  //   <!-- <dt>
-  //   <span class="webName">Website name</span>
-  //   Username: <span class="username">exName</span> Password:
-  //   <span class="password">exPassword</span>
-  //   <button id="edit" class="webOptions" onclick="">edit</button>
-  //   <button id="delete" class="webOptions" onclick="">delete</button>
-  // </dt> -->
-  // window.location.href = "diary.html";
+  var passwordAnalysis = "";
+  if (!isLong(newPassword)) {
+    passwordAnalysis = "password: too short";
+  } else if (!hasLower(newPassword)) {
+    passwordAnalysis = "password: no lowercase";
+  } else if (!hasUpper(newPassword)) {
+    passwordAnalysis = "password: no uppercase";
+  } else if (!hasNumbers(newPassword)) {
+    passwordAnalysis = "password: no number";
+  } else if (!hasSymbols(newPassword)) {
+    passwordAnalysis = "password: no symbol";
+  }
+  var newSpan = document.createElement("span");
+  $(newSpan).text(passwordAnalysis);
+  $(newP).append(newSpan);
+  $(newSpan).attr("id", newWebsite + newWebsite);
+  $(newSpan).attr("class", "analysis");
 }
 
-// function myDelete(website) {
-//   $("#" + website).remove();
-// }
+function lock() {
+  console.log("hj");
+  $(".del").prop("disabled", true);
+  $(".edit").prop("disabled", true);
+}
