@@ -1,6 +1,6 @@
 #content {
   margin: auto;
-  width: 50%;
+  width: 80%;
   border: 3px solid #59c1bd;
   padding: 10px;
   background-color: #e7f6f2;
@@ -17,7 +17,12 @@ dt {
   border-bottom: solid;
 }
 .edit {
-  margin-left: 20%;
+  position: absolute;
+  right: 700px;
+}
+.del {
+  position: absolute;
+  right: 740px;
 }
 #lockUnlock {
   text-align: center;
@@ -38,4 +43,21 @@ h1 {
 }
 .buttons {
   text-align: center;
+}
+
+.analysis {
+  position: absolute;
+  right: 400px;
+  color: green;
+  font-weight: bold;
+}
+
+.userNameOutput {
+  position: absolute;
+  left: 500px;
+}
+
+.passwordOutput {
+  position: absolute;
+  left: 800px;
 }
