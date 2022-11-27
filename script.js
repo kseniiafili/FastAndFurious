@@ -286,14 +286,23 @@ function save() {
   var newCategory = document.getElementById("category").value;
 
   var newP = document.createElement("p");
-  $(newP).text(
-    "WEBSITE NAME : " +
-      newWebsite +
-      "USERNAME: " +
-      newUsername +
-      "PASSWORD: " +
-      newPassword
-  );
+
+  var spanWeb = document.createElement("span");
+  var spanUser = document.createElement("span");
+  var spanPass = document.createElement("span");
+  $(spanWeb).text("WEBSITE NAME: " + newWebsite);
+  $(spanWeb).attr("id", "webName" + newWebsite);
+  $(spanWeb).attr("class", "webNameOutput");
+  $(spanUser).text("USER NAME: " + newUsername);
+  $(spanUser).attr("id", "userName" + newWebsite);
+  $(spanUser).attr("class", "userNameOutput");
+  $(spanPass).text("PASSWORD: " + newPassword);
+  $(spanPass).attr("id", "password" + newWebsite);
+  $(spanPass).attr("class", "passwordOutput");
+
+  $(newP).append(spanWeb);
+  $(newP).append(spanUser);
+  $(newP).append(spanPass);
   $(newP).attr("class", "webName");
   $(newP).attr("id", newWebsite);
 
@@ -302,6 +311,34 @@ function save() {
   $(editButton).attr("type", "button");
   $(editButton).attr("value", "edit");
   $(editButton).attr("class", "edit");
+  $(editButton).attr("id", newWebsite);
+  $(editButton).click(function () {
+    var questionUsername = confirm("Would you like to update username?");
+    if (questionUsername) {
+      editedUsername = prompt("What is your new Username?");
+      $("#userName" + newWebsite).text("USER NAME: " + editedUsername);
+    }
+
+    var questionPassword = confirm("Would you like to update password?");
+    if (questionPassword) {
+      editedPassword = prompt("What is your new Password?");
+      $("#password" + newWebsite).text("PASSWORD: " + editedPassword);
+    }
+    var passwordAnalysis = "";
+    if (!isLong(editedPassword)) {
+      passwordAnalysis = "passwordis too short";
+    } else if (!hasLower(editedPassword)) {
+      passwordAnalysis = "password has no lowercase";
+    } else if (!hasUpper(editedPassword)) {
+      passwordAnalysis = "password has no uppercase";
+    } else if (!hasNumbers(editedPassword)) {
+      passwordAnalysis = "password has no number";
+    } else if (!hasSymbols(editedPassword)) {
+      passwordAnalysis = "password has no symbol";
+    }
+    $("#analysis" + newWebsite).text(passwordAnalysis);
+  });
+
   $(newP).append(editButton);
 
   var deleteButton = document.createElement("input");
@@ -312,8 +349,8 @@ function save() {
     $("#" + newWebsite).remove();
   });
   $(newP).append(deleteButton);
-  
- var passwordAnalysis = "";
+
+  var passwordAnalysis = "";
   if (!isLong(newPassword)) {
     passwordAnalysis = "password: too short";
   } else if (!hasLower(newPassword)) {
@@ -325,16 +362,41 @@ function save() {
   } else if (!hasSymbols(newPassword)) {
     passwordAnalysis = "password: no symbol";
   }
+
   var newSpan = document.createElement("span");
   $(newSpan).text(passwordAnalysis);
   $(newP).append(newSpan);
-  $(newSpan).attr("id", newWebsite + newWebsite);
+  $(newSpan).attr("id", "analysis" + newWebsite);
   $(newSpan).attr("class", "analysis");
 }
 
+// function analysis() {
+//   var passwordAnalysis = "";
+//   if (!isLong(newPassword)) {
+//     passwordAnalysis = "password: too short";
+//   } else if (!hasLower(newPassword)) {
+//     passwordAnalysis = "password: no lowercase";
+//   } else if (!hasUpper(newPassword)) {
+//     passwordAnalysis = "password: no uppercase";
+//   } else if (!hasNumbers(newPassword)) {
+//     passwordAnalysis = "password: no number";
+//   } else if (!hasSymbols(newPassword)) {
+//     passwordAnalysis = "password: no symbol";
+//   }
+
+//   var newSpan = document.createElement("span");
+//   $(newSpan).text(passwordAnalysis);
+//   $(newP).append(newSpan);
+//   $(newSpan).attr("id", newWebsite + newWebsite);
+//   $(newSpan).attr("class", "analysis");
+// }
+
 function lock() {
-  console.log("hj");
   $(".del").prop("disabled", true);
   $(".edit").prop("disabled", true);
+}
+function unlock() {
+  $(".del").prop("disabled", false);
+  $(".edit").prop("disabled", false);
 }
 
