@@ -74,7 +74,7 @@ function colourChange() {
     "rgb(255, 221, 210)",
     "rgb(255, 135, 135)",
     "rgb(237, 237, 237)",
-    "rgb(231,246,242)",
+    "rgb(231, 246, 242)",
   ];
   var num = Math.floor(Math.random() * colours.length);
   while (colours[num] == currentColour.style.background) {
