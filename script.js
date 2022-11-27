@@ -192,7 +192,7 @@ function hasSymbols(string) {
     "=",
   ];
   for (var i = 0; i < string.length; i++) {
-    for (j = 0; j < symbols.length; j++) {
+    for (j = 0; j < symbols.length + 1; j++) {
       if (string[i] == symbols[j]) returnValue = true;
     }
   }
@@ -227,7 +227,7 @@ function hasUpper(string) {
     "Z",
   ];
   for (var i = 0; i < string.length; i++) {
-    for (j = 0; j < uppercase.length; j++) {
+    for (j = 0; j < uppercase.length + 1; j++) {
       if (string[i] == uppercase[j]) returnValue = true;
     }
   }
@@ -261,7 +261,7 @@ function hasLower(string) {
     "y",
     "z",
   ];
-  for (var i = 0; i < string.length; i++) {
+  for (var i = 0; i < string.length + 1; i++) {
     for (j = 0; j < lowerCase.length; j++) {
       if (string[i] == lowerCase[j]) returnValue = true;
     }
@@ -272,7 +272,7 @@ function hasLower(string) {
 function hasNumbers(string) {
   var returnValue = false;
   var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  for (var i = 0; i < string.length; i++) {
+  for (var i = 0; i < string.length + 1; i++) {
     for (j = 0; j < numbers.length; j++) {
       if (string[i] == numbers[j]) returnValue = true;
     }
