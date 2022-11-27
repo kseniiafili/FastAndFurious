@@ -7,35 +7,35 @@ function signUp() {
       "The password is too short. Would you like to generate a strong password?"
     );
     if (wantsStrong) {
-      generatePassword();
+      alert(generatePassword());
     }
   } else if (!hasLower(password.value)) {
     var wantsStrong = confirm(
       "The password doesn't have any lowercase letters. Would you like to generate a strong password?"
     );
     if (wantsStrong) {
-      generatePassword();
+      alert(generatePassword());
     }
   } else if (!hasUpper(password.value)) {
     var wantsStrong = confirm(
       "The password doesn't have any uppercase letters. Would you like to generate a strong password?"
     );
     if (wantsStrong) {
-      generatePassword();
+      alert(generatePassword());
     }
   } else if (!hasNumbers(password.value)) {
     var wantsStrong = confirm(
       "The password doesn't have any numbers. Would you like to generate a strong password?"
     );
     if (wantsStrong) {
-      generatePassword();
+      alert(generatePassword());
     }
   } else if (!hasSymbols(password.value)) {
     var wantsStrong = confirm(
       "The password doesn't have any symbols. Would you like to generate a strong password?"
     );
     if (wantsStrong) {
-      generatePassword();
+      alert(generatePassword());
     }
   } else {
     var userHint = prompt(
@@ -164,7 +164,7 @@ function generatePassword() {
       randomUsymbol +
       randomnumber;
   }
-  alert(password);
+  return password;
 }
 
 function isLong(string) {
@@ -370,27 +370,6 @@ function save() {
   $(newSpan).attr("class", "analysis");
 }
 
-// function analysis() {
-//   var passwordAnalysis = "";
-//   if (!isLong(newPassword)) {
-//     passwordAnalysis = "password: too short";
-//   } else if (!hasLower(newPassword)) {
-//     passwordAnalysis = "password: no lowercase";
-//   } else if (!hasUpper(newPassword)) {
-//     passwordAnalysis = "password: no uppercase";
-//   } else if (!hasNumbers(newPassword)) {
-//     passwordAnalysis = "password: no number";
-//   } else if (!hasSymbols(newPassword)) {
-//     passwordAnalysis = "password: no symbol";
-//   }
-
-//   var newSpan = document.createElement("span");
-//   $(newSpan).text(passwordAnalysis);
-//   $(newP).append(newSpan);
-//   $(newSpan).attr("id", newWebsite + newWebsite);
-//   $(newSpan).attr("class", "analysis");
-// }
-
 function lock() {
   $(".del").prop("disabled", true);
   $(".edit").prop("disabled", true);
@@ -399,4 +378,3 @@ function unlock() {
   $(".del").prop("disabled", false);
   $(".edit").prop("disabled", false);
 }
-
