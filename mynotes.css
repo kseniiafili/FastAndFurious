@@ -4,9 +4,9 @@ header {
 .content {
   margin: auto;
   width: 50%;
-  border: 3px solid #9ed2c6;
+  border: 3px solid #59c1bd;
   padding: 10px;
-  background-color: #e9dac1;
+  background-color: #e7f6f2;
 }
 p {
   text-align: right;
@@ -16,8 +16,9 @@ p {
   margin-bottom: 5%;
 }
 body {
-  background-color: #f7ecde;
+  background-color: #cff5e7;
 }
 h1 {
   font-family: "Playfair";
+  color: #0d4c92;
 }

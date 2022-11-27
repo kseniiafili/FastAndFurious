@@ -312,8 +312,8 @@ function save() {
     $("#" + newWebsite).remove();
   });
   $(newP).append(deleteButton);
-
-  var passwordAnalysis = "";
+  
+ var passwordAnalysis = "";
   if (!isLong(newPassword)) {
     passwordAnalysis = "password: too short";
   } else if (!hasLower(newPassword)) {
@@ -337,3 +337,4 @@ function lock() {
   $(".del").prop("disabled", true);
   $(".edit").prop("disabled", true);
 }
+
