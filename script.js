@@ -307,9 +307,34 @@ function save() {
   var deleteButton = document.createElement("input");
   $(deleteButton).attr("type", "button");
   $(deleteButton).attr("value", "delete");
-  $(deleteButton).attr("class", "delete");
+  $(deleteButton).attr("class", "del");
   $(deleteButton).click(function () {
     $("#" + newWebsite).remove();
   });
   $(newP).append(deleteButton);
+  
+ var passwordAnalysis = "";
+  if (!isLong(newPassword)) {
+    passwordAnalysis = "password: too short";
+  } else if (!hasLower(newPassword)) {
+    passwordAnalysis = "password: no lowercase";
+  } else if (!hasUpper(newPassword)) {
+    passwordAnalysis = "password: no uppercase";
+  } else if (!hasNumbers(newPassword)) {
+    passwordAnalysis = "password: no number";
+  } else if (!hasSymbols(newPassword)) {
+    passwordAnalysis = "password: no symbol";
+  }
+  var newSpan = document.createElement("span");
+  $(newSpan).text(passwordAnalysis);
+  $(newP).append(newSpan);
+  $(newSpan).attr("id", newWebsite + newWebsite);
+  $(newSpan).attr("class", "analysis");
 }
+
+function lock() {
+  console.log("hj");
+  $(".del").prop("disabled", true);
+  $(".edit").prop("disabled", true);
+}
+
