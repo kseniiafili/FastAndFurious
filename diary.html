@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Diary</title>
     <link rel="stylesheet" type="text/css" href="diary.css" title="style" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
@@ -13,93 +14,130 @@
       <header>
         <h1>Your Password Diary</h1>
 
-        <button id="colour" onclick="">Change Background Colour</button>
-        <button id="addNew" onclick="">Add New</button>
-        <button id="passwordGenerator" onclick="">Password Generator</button>
+        <button id="colour" onclick="colourChange()">
+          Change Background Colour
+        </button>
+    
+        <button id="passwordGenerator" onclick="generatePassword()">
+          Password Generator
+        </button>
         <a href="mynotes.html"><button id="myNotes">My notes</button></a>
       </header>
 
-      <div id="Financial" class="category">
+      <div id="financial" class="category">
         <h3>Financial</h3>
         <dl>
-          <dt>
+          <!-- <dt>
             <span class="webName">Website name</span>
             Username: <span class="username">exName</span> Password:
             <span class="password">exPassword</span>
             <button id="edit" class="webOptions" onclick="">edit</button>
             <button id="delete" class="webOptions" onclick="">delete</button>
-          </dt>
+          </dt> -->
         </dl>
       </div>
 
-      <div id="Shopping" class="category">
+      <div id="shopping" class="category">
         <h3>Shopping</h3>
-        <dl>
-          <dt>
+        <dl >
+          <!-- <dt>
             <span class="webName">Website name</span>
             Username: <span class="username">exName</span> Password:
             <span class="password">exPassword</span>
             <button id="edit" class="webOptions" onclick="">edit</button>
             <button id="delete" class="webOptions" onclick="">delete</button>
-          </dt>
+          </dt> -->
         </dl>
       </div>
 
-      <div id="Games" class="category">
+      <div id="games" class="category">
         <h3>Games</h3>
         <dl>
-          <dt>
+          <!-- <dt>
             <span class="webName">Website name</span>
             Username: <span class="username">exName</span> Password:
             <span class="password">exPassword</span>
             <button id="edit" class="webOptions" onclick="">edit</button>
             <button id="delete" class="webOptions" onclick="">delete</button>
-          </dt>
+          </dt> -->
         </dl>
       </div>
 
-      <div id="Education" class="category">
+      <div id="education" class="category">
         <h3>Education</h3>
         <dl>
-          <dt>
+          <!-- <dt>
             <span class="webName">Website name</span>
             Username: <span class="username">exName</span> Password:
             <span class="password">exPassword</span>
             <button id="edit" class="webOptions" onclick="">edit</button>
             <button id="delete" class="webOptions" onclick="">delete</button>
-          </dt>
+          </dt> -->
         </dl>
       </div>
 
-      <div id="Social" class="category">
+      <div id="social" class="category">
         <h3>Social</h3>
         <dl>
-          <dt>
+          <!-- <dt>
             <span class="webName">Website name</span>
             Username: <span class="username">exName</span> Password:
             <span class="password">exPassword</span>
             <button id="edit" class="webOptions" onclick="">edit</button>
             <button id="delete" class="webOptions" onclick="">delete</button>
-          </dt>
+          </dt> -->
         </dl>
       </div>
 
-      <div id="Other" class="category">
+      <div id="other" class="category">
         <h3>Other</h3>
         <dl>
-          <dt>
+          <!-- <dt>
             <span class="webName">Website name</span>
             Username: <span class="username">exName</span> Password:
             <span class="password">exPassword</span>
             <button id="edit" class="webOptions" onclick="">edit</button>
             <button id="delete" class="webOptions" onclick="">delete</button>
-          </dt>
+          </dt> -->
         </dl>
       </div>
 
       <div id="lockUnlock">
         <button id="lock" onclick="">Lock</button>
         <button id="unlock" onclick="">Unlock</button>
+      </div>
+    </div>
+    <div id="content">
+      <h1>Add New Login Information</h1>
+
+      <p>
+        <div class="fieldName">Website</span>
+        <input class="input" id="newWebsite" type="text" />
+      </p>
+
+      <p>
+        <span class="fieldName">Username</span>
+        <input class="input" id="username" type="text" />
+      </p>
+      <p>
+        <span class="fieldName">Password</span>
+        <input class="input" id="password" type="text" />
+      </p>
+
+      <p>
+        <span class="fieldName"> Category</span>
+        <select id='category' name="category">
+          <option value="financial">Financial</option>
+          <option value="shopping">Shopping</option>
+          <option value="games">Games</option>
+          <option value="education">Education</option>
+          <option value="social">Social</option>
+          <option value="other">Other</option>
+        </select>
+      </p>
+      <div class="buttons">
+        <button id="addNewCancel" onclick="">Cancel</button>
+        <button id="addNewSave" onclick="save()">Save</button>
       </div>
     </div>
   </body>
