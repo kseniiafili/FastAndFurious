@@ -14,14 +14,14 @@
       <header>
         <h1>Your Password Diary</h1>
 
-        <button id="colour" onclick="colourChange()">
+        <button id="colour" class='greenButtons' onclick="colourChange()">
           Change Background Colour
         </button>
     
-        <button id="passwordGenerator" onclick="alert(generatePassword())">
+        <button id="passwordGenerator" class='greenButtons' onclick="alert(generatePassword())">
           Password Generator
         </button>
-        <a href="mynotes.html"><button id="myNotes">My notes</button></a>
+        <a href="mynotes.html"><button id="myNotes" class='greenButtons'>My notes</button></a>
       </header>
 
       <div id="financial" class="category">
@@ -50,8 +50,8 @@
       </div>
 
       <div id="lockUnlock">
-        <button id="lock" onclick="lock()">Lock</button>
-        <button id="unlock" onclick="unlock()">Unlock</button>
+        <button id="lock" class='greenButtons'onclick="lock()">Lock</button>
+        <button id="unlock" class='greenButtons'onclick="unlock()">Unlock</button>
       </div>
     </div>
     <div id="content">
@@ -82,7 +82,6 @@
         </select>
       </p>
       <div class="buttons">
-        <button id="addNewCancel" onclick="clear()">Clear</button>
         <button id="addNewSave" onclick="save()">Save</button>
       </div>
     </div>
