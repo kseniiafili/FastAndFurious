@@ -82,6 +82,7 @@ function colourChange() {
   }
   document.body.style.background = colours[num];
 }
+
 function generatePassword() {
   var lowerCase = [
     "a",
@@ -103,6 +104,7 @@ function generatePassword() {
     "r",
     "s",
     "t",
+    "u",
     "v",
     "x",
     "y",
@@ -128,6 +130,7 @@ function generatePassword() {
     "R",
     "S",
     "T",
+    "U",
     "V",
     "X",
     "Y",
@@ -221,6 +224,7 @@ function hasUpper(string) {
     "R",
     "S",
     "T",
+    "U",
     "V",
     "X",
     "Y",
@@ -257,6 +261,7 @@ function hasLower(string) {
     "s",
     "t",
     "v",
+    "u",
     "x",
     "y",
     "z",
